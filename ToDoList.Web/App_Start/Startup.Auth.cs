@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using ToDoList.Web.Models;
+using ToDoList.Web.App_Start;
 
 namespace ToDoList.Web
 {
