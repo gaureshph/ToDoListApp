@@ -23,9 +23,12 @@ namespace ToDoList.Web
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/Scripts/CustomScripts").Include(
+                        "~/Scripts/ToDoList.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/ToDoList.css"));
         }
     }
 }
