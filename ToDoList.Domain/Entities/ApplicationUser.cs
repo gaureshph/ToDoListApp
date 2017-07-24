@@ -3,7 +3,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace ToDoList.Web.Models
+namespace ToDoList.Domain.Entities
 {
     public class ApplicationUser : IdentityUser
     {

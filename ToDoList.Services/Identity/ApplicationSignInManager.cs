@@ -3,7 +3,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using ToDoList.Web.Models;
+using ToDoList.Domain.Entities;
 
 namespace ToDoList.Web.App_Start
 {

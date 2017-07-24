@@ -197,6 +197,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ToDoListController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,6 +213,8 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\to-do-list-background.jpg" />
+    <Content Include="Images\todolist-icon.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -237,7 +240,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -264,6 +269,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ToDoList\TaskList.cshtml" />
+    <Content Include="Views\ToDoList\Create.cshtml" />
+    <Content Include="Views\ToDoList\Edit.cshtml" />
+    <Content Include="Views\ToDoList\Delete.cshtml" />
+    <Content Include="Views\ToDoList\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -280,6 +290,10 @@
     <ProjectReference Include="..\ToDoList.Domain\ToDoList.Domain.csproj">
       <Project>{7bc5a274-2634-4134-81e7-4ca15ae9982b}</Project>
       <Name>ToDoList.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToDoList.Infrastructure\ToDoList.Infrastructure.csproj">
+      <Project>{69DAECCA-4920-4B08-9866-5CFF2FDF2A2C}</Project>
+      <Name>ToDoList.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\ToDoList.Services\ToDoList.Services.csproj">
       <Project>{eaab1da4-b028-40d6-a519-8db2e7a54f9b}</Project>

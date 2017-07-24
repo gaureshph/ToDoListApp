@@ -9,32 +9,67 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+    <div id="header" class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <span class="pull-left glyphiconIconContainer glyphiconIconContainerHamburger">
+                <span class="glyphicon glyphicon-th-list glyphiconIcon glyphiconIconHamburger"></span>
+            </span>
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                <img src="~/Images/todolist-icon.png" />
+            </a>
+        </div>
+        <div>
+            <span class="glyphiconIconContainer glyphiconIconContainerUserProfile pull-right">
+                <span class="glyphicon glyphicon-user glyphiconIcon glyphiconIconUserProfile"></span>
+            </span>
+            <ul id="ulTopNavDropDownList">
+                <li class="topNavDropDownListItem">
+                    @User.Identity.GetUserName()
+                </li>
+                <li class="topNavDropDownListItem">                   
+                    @Html.ActionLink("Log Off", "LogOff", "Account")
+                </li>
+            </ul>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    <div id="wrapper">
+        <div id="sidebar-wrapper" class="col-md-1">
+            <div id="sidebar">
+                <ul class="nav list-group">
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 1</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 2</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 9</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 10</a>
+                    </li>
+                    <li>
+                        <a class="list-group-item" href="#"><i class="icon-home icon-1x"></i>Sidebar Item 11</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="main-wrapper" class="col-md-11 pull-right">
+            <div id="main">
+                <div class="page-header">
+                    <h3>Place Holder For Page Header</h3>
+                </div>
+                <div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 footer">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            </ul>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

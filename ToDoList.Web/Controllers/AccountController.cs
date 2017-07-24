@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using ToDoList.Web.Models;
 using ToDoList.Web.App_Start;
+using ToDoList.Domain.Entities;
 
 namespace ToDoList.Web.Controllers
 {
@@ -385,8 +386,6 @@ namespace ToDoList.Web.Controllers
 
         //
         // POST: /Account/LogOff
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);

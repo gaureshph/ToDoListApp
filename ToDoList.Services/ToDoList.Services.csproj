@@ -88,6 +88,7 @@
     <Compile Include="Identity\ApplicationSignInManager.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\TaskItemViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -98,6 +99,10 @@
     <ProjectReference Include="..\ToDoList.Domain\ToDoList.Domain.csproj">
       <Project>{7bc5a274-2634-4134-81e7-4ca15ae9982b}</Project>
       <Name>ToDoList.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToDoList.Infrastructure\ToDoList.Infrastructure.csproj">
+      <Project>{69DAECCA-4920-4B08-9866-5CFF2FDF2A2C}</Project>
+      <Name>ToDoList.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
